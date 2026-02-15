@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎊 CHÚC MỪNG NĂM MỚI 2026 - XUÂN ẤT TỴ 🎊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #8B0000 0%, #DC143C 25%, #FF6347 50%, #FFD700 75%, #FFA500 100%);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        color: #fff;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Audio controls ẩn */
+    #bgMusic {
+        display: none;
+    }
+
+    /* Container chính */
+    .main-container {
+        position: relative;
+        min-height: 100vh;
+        padding: 40px 20px;
+        z-index: 10;
+    }
+
+    /* Tiêu đề chính */
+    .main-title {
+        text-align: center;
+        margin-bottom: 60px;
+        animation: titleEntrance 2s ease-out;
+    }
+
+    @keyframes titleEntrance {
+        0% {
+            opacity: 0;
+            transform: translateY(-100px) scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .main-title h1 {
+        font-size: 4em;
+        font-weight: bold;
+        color: #FFD700;
+        text-shadow: 
+            0 0 10px #FF0000,
+            0 0 20px #FF0000,
+            0 0 30px #FF6347,
+            0 0 40px #FF6347,
+            3px 3px 5px rgba(0,0,0,0.5);
+        animation: titleGlow 2s ease-in-out infinite;
+        margin-bottom: 20px;
+    }
+
+    @keyframes titleGlow {
+        0%, 100% {
+            text-shadow: 
+                0 0 10px #FF0000,
+                0 0 20px #FF0000,
+                0 0 30px #FF6347,
+                0 0 40px #FF6347,
+                3px 3px 5px rgba(0,0,0,0.5);
+        }
+        50% {
+            text-shadow: 
+                0 0 20px #FFD700,
+                0 0 30px #FFD700,
+                0 0 40px #FFA500,
+                0 0 50px #FFA500,
+                3px 3px 5px rgba(0,0,0,0.5);
+        }
+    }
+
+    .subtitle {
+        font-size: 2em;
+        color: #FFF;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        animation: subtitleBounce 3s ease-in-out infinite;
+    }
+
+    @keyframes subtitleBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+
+    /* Thiệp chúc */
+    .greeting-card {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 40px;
+        padding: 60px;
+        box-shadow: 
+            0 30px 80px rgba(0,0,0,0.4),
+            inset 0 0 50px rgba(255,215,0,0.2);
+        border: 6px solid #FFD700;
+        position: relative;
+        animation: cardFloat 4s ease-in-out infinite;
+        margin-bottom: 80px;
+    }
+
+    @keyframes cardFloat {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+            box-shadow: 
+                0 30px 80px rgba(0,0,0,0.4),
+                inset 0 0 50px rgba(255,215,0,0.2);
+        }
+        50% {
+            transform: translateY(-20px) rotate(1deg);
+            box-shadow: 
+                0 50px 100px rgba(0,0,0,0.5),
+                inset 0 0 60px rgba(255,215,0,0.3);
+        }
+    }
+
+    .card-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 3px dashed #FFD700;
+    }
+
+    .card-header h2 {
+        font-size: 2.5em;
+        color: #DC143C;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        margin-bottom: 15px;
+        animation: headerPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes headerPulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+
+    .greeting-content {
+        color: #333;
+        font-size: 1.15em;
+        line-height: 2;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+
+    .greeting-content p {
+        margin-bottom: 25px;
+        animation: textFadeIn 1s ease-out forwards;
+        opacity: 0;
+    }
+
+    @keyframes textFadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .icon-text {
+        display: inline-block;
+        margin: 0 5px;
+        font-size: 1.3em;
+        animation: iconBounce 1s ease-in-out infinite;
+    }
+
+    @keyframes iconBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+
+    .highlight {
+        color: #DC143C;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    /* Chữ ký */
+    .signature {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 3px dashed #FFD700;
+    }
+
+    .signature-text {
+        font-size: 1.5em;
+        color: #1976D2;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .signature-name {
+        font-size: 1.8em;
+        color: #DC143C;
+        font-weight: bold;
+        animation: signatureGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes signatureGlow {
+        0%, 100% {
+            text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+        }
+        50% {
+            text-shadow: 0 0 20px rgba(220, 20, 60, 0.8);
+        }
+    }
+
+    /* Pháo hoa góc màn hình */
+    .firework-corner {
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        z-index: 1000;
+        pointer-events: none;
+    }
+
+    .firework-left {
+        bottom: 0;
+        left: 0;
+    }
+
+    .firework-right {
+        bottom: 0;
+        right: 0;
+    }
+
+    .thank-you-message {
+        position: fixed;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        font-size: 3em;
+        font-weight: bold;
+        color: #FFD700;
+        text-shadow: 
+            0 0 20px #FF0000,
+            0 0 30px #FF0000,
+            0 0 40px #FF6347,
+            3px 3px 6px rgba(0,0,0,0.8);
+        z-index: 999;
+        opacity: 0;
+        animation: thankYouAppear 3s ease-in-out 2s forwards;
+        text-align: center;
+        padding: 30px;
+        background: rgba(0,0,0,0.6);
+        border-radius: 20px;
+        border: 3px solid #FFD700;
+    }
+
+    @keyframes thankYouAppear {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, 50%) scale(0.5);
+        }
+        50% {
+            opacity: 1;
+            transform: translate(-50%, 50%) scale(1.2);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, 50%) scale(1);
+        }
+    }
+
+    /* Hiệu ứng lì xì rơi */
+    .lixi {
+        position: fixed;
+        width: 60px;
+        height: 80px;
+        background: linear-gradient(135deg, #FF0000, #DC143C);
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        animation: lixiFall linear;
+        z-index: 5;
+    }
+
+    .lixi::before {
+        content: '福';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        color: #FFD700;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    @keyframes lixiFall {
+        0% {
+            top: -100px;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 110vh;
+            transform: rotate(720deg);
+        }
+    }
+
+    /* Hoa mai, đào */
+    .flower {
+        position: fixed;
+        animation: flowerFloat linear;
+        z-index: 5;
+    }
+
+    @keyframes flowerFloat {
+        0% {
+            bottom: -50px;
+            transform: rotate(0deg);
+        }
+        100% {
+            bottom: 110vh;
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Confetti */
+    .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        animation: confettiFall linear;
+        z-index: 5;
+    }
+
+    @keyframes confettiFall {
+        0% {
+            top: -10px;
+            transform: rotateZ(0deg);
+        }
+        100% {
+            top: 110vh;
+            transform: rotateZ(720deg);
+        }
+    }
+
+    /* Đèn lồng */
+    .lantern {
+        position: fixed;
+        width: 60px;
+        height: 90px;
+        background: linear-gradient(180deg, #FF0000, #DC143C);
+        border-radius: 15px;
+        box-shadow: 
+            0 10px 30px rgba(255,0,0,0.5),
+            inset 0 0 20px rgba(255,215,0,0.3);
+        animation: lanternSwing 4s ease-in-out infinite;
+        z-index: 6;
+    }
+
+    .lantern::before {
+        content: '春';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 32px;
+        color: #FFD700;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .lantern::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 20px;
+        background: #FFD700;
+        border-radius: 0 0 50% 50%;
+    }
+
+    @keyframes lanternSwing {
+        0%, 100% {
+            transform: rotate(-8deg);
+        }
+        50% {
+            transform: rotate(8deg);
+        }
+    }
+
+    /* Sparkles */
+    .sparkle {
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background: #FFD700;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #FFD700;
+        animation: sparkleAnim 2s ease-in-out infinite;
+        z-index: 5;
+    }
+
+    @keyframes sparkleAnim {
+        0%, 100% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(2);
+        }
+    }
+
+    /* Start button */
+    .start-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+
+    .start-button {
+        padding: 30px 60px;
+        font-size: 2em;
+        font-weight: bold;
+        color: #FFD700;
+        background: linear-gradient(135deg, #DC143C, #FF6347);
+        border: 4px solid #FFD700;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(255,215,0,0.5);
+        transition: all 0.3s ease;
+        animation: buttonPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes buttonPulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.5);
+        }
+        50% {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(255,215,0,0.8);
+        }
+    }
+
+    .start-button:hover {
+        transform: scale(1.15);
+        box-shadow: 0 15px 50px rgba(255,215,0,0.9);
+    }
+
+    .start-instruction {
+        margin-bottom: 30px;
+        font-size: 1.5em;
+        color: #FFD700;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .main-title h1 {
+            font-size: 2em;
+        }
+        .subtitle {
+            font-size: 1.2em;
+        }
+        .greeting-card {
+            padding: 30px;
+        }
+        .card-header h2 {
+            font-size: 1.8em;
+        }
+        .greeting-content {
+            font-size: 1em;
+        }
+        .thank-you-message {
+            font-size: 1.5em;
+            padding: 20px;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Start Overlay -->
+    <div class="start-overlay" id="startOverlay">
+        <div class="start-instruction">
+            🎊 Nhấn nút bên dưới để bắt đầu trải nghiệm 🎊<br>
+            🔊 Bật loa để nghe nhạc nền và lời chúc 🔊
+        </div>
+        <button class="start-button" id="startButton">
+            🎉 BẮT ĐẦU 🎉
+        </button>
+    </div>
+
+```
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="https://files.catbox.moe/2egcet.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Main Content -->
+<div class="main-container">
+    <div class="main-title">
+        <h1>🎊 CHÚC MỪNG NĂM MỚI 2026 🎊</h1>
+        <div class="subtitle">✨ XUÂN ẤT TỴ - VẠN SỰ NHƯ Ý ✨</div>
+    </div>
+
+    <div class="greeting-card">
+        <div class="card-header">
+            <h2>🧧 THƯ CHÚC TẾT ẤT TỴ 2026 🧧</h2>
+            <p style="font-size: 1.2em; color: #666; margin: 10px 0;">Gửi đến tất cả những người bạn thân yêu</p>
+        </div>
+
+        <div class="greeting-content" id="greetingText">
+            <p><span class="icon-text">🌸</span> Kính gửi tất cả các bạn thân yêu, <span class="icon-text">🌸</span></p>
+
+            <p>Xuân về mang theo niềm vui mới, năm Ất Tỵ 2026 đã đến với muôn vàn may mắn và hạnh phúc. Trong không khí rộn ràng của mùa xuân, khi những cánh mai vàng nở rộ, khi tiếng pháo xuân vang lên khắp nơi, tôi xin được gửi đến các bạn những lời chúc tốt đẹp nhất từ tận đáy lòng.</p>
+
+            <p><span class="icon-text">💰</span> <span class="highlight">VỀ TIỀN BẠC VÀ TÀI LỘC:</span> <span class="icon-text">💰</span></p>
+
+            <p>Chúc các bạn năm mới TÀI LỘC DỒI DÀO như nước chảy nguồn trào. Túi tiền luôn đầy ắp, ví không bao giờ cạn. Mọi khoản đầu tư đều sinh lời, mọi công việc kinh doanh đều thuận buồm xuôi gió. Tiền bạc về như nước, tài lộc tụ đầy nhà. <span class="icon-text">💵</span></p>
+
+            <p>Cầu mong các bạn sẽ gặp được nhiều cơ hội làm ăn, nhiều thương vụ thành công, nhiều hợp đồng béo bở. Những khoản đầu tư sẽ sinh lời gấp bội, những dự án sẽ thành công vang dội. Túi tiền ngày càng phồng lên, số dư tài khoản ngày càng tăng cao. <span class="icon-text">💸</span></p>
+
+            <p>Chúc các bạn biết cách quản lý tài chính khôn ngoan, đầu tư sinh lời hiệu quả, tiết kiệm hợp lý và chi tiêu có kế hoạch. Tiền bạc sẽ đến với các bạn từ nhiều nguồn khác nhau: từ công việc chính, từ công việc phụ, từ đầu tư, từ những món quà bất ngờ. <span class="icon-text">🎁</span></p>
+
+            <p><span class="icon-text">📚</span> <span class="highlight">VỀ HỌC HÀNH VÀ TRI THỨC:</span> <span class="icon-text">📚</span></p>
+
+            <p>Chúc các bạn năm mới HỌC HÀNH TIẾN BỘ vượt bậc. Nếu đang đi học, các bạn sẽ có thành tích học tập xuất sắc, điểm số cao ngất ngưỡng, thầy cô khen ngợi, bạn bè nể phục. Mọi kỳ thi đều đạt kết quả cao nhất, mọi bài kiểm tra đều điểm 10. <span class="icon-text">📝</span></p>
+
+            <p>Chúc các bạn luôn ham học hỏi, say mê nghiên cứu, khát khao tri thức. Mỗi ngày đều học được điều mới mẻ, mỗi ngày đều tiến bộ hơn ngày hôm qua. Kiến thức của các bạn ngày càng sâu rộng, kỹ năng ngày càng tinh thông. <span class="icon-text">🎓</span></p>
+
+            <p>Nếu các bạn đang chuẩn bị thi cử, chúc các bạn thi đạt kết quả cao nhất, đỗ đại học mơ ước, trúng tuyển công chức viên chức, đậu kỳ thi quan trọng. Tâm trí minh mẫn, trí nhớ siêu phàm, tư duy logic tuyệt vời. <span class="icon-text">✏️</span></p>
+
+            <p>Chúc các bạn đang đi làm luôn học hỏi nâng cao trình độ, học thêm nhiều kỹ năng mới, tham gia các khóa đào tạo chất lượng, lấy thêm nhiều bằng cấp, chứng chỉ có giá trị. Tri thức là vốn quý nhất, hãy luôn đầu tư cho bản thân. <span class="icon-text">💼</span></p>
+
+            <p><span class="icon-text">🎯</span> <span class="highlight">VỀ CÔNG VIỆC VÀ SỰ NGHIỆP:</span> <span class="icon-text">🎯</span></p>
+
+            <p>Chúc các bạn năm mới CÔNG VIỆC THUẬN LỢI, SỰ NGHIỆP THĂNG TIẾN rực rỡ. Mọi dự án đều hoàn thành xuất sắc, mọi deadline đều kịp hạn, mọi mục tiêu đều đạt được và vượt xa kỳ vọng. Công việc như ý, sếp khen ngợi, đồng nghiệp tin tưởng. <span class="icon-text">🏆</span></p>
+
+            <p>Chúc các bạn được thăng chức, tăng lương, thưởng Tết to, được giao nhiệm vụ quan trọng, được tín nhiệm giao việc lớn. Vị trí công tác ngày càng cao, thu nhập ngày càng khá, uy tín ngày càng lớn. <span class="icon-text">📈</span></p>
+
+            <p>Nếu các bạn đang tìm việc, chúc các bạn sớm tìm được công việc ưng ý, lương cao, phúc lợi tốt, môi trường làm việc chuyên nghiệp, đồng nghiệp thân thiện, sếp hiểu người. Chúc các bạn vượt qua mọi vòng phỏng vấn một cách xuất sắc. <span class="icon-text">🤝</span></p>
+
+            <p>Nếu các bạn đang kinh doanh, chúc các bạn khách hàng đông như kiến, đơn hàng nhiều như mưa, doanh thu tăng trưởng liên tục, lợi nhuận cao ngất ngưỡng. Sản phẩm/dịch vụ được thị trường đón nhận nhiệt liệt, thương hiệu ngày càng lớn mạnh. <span class="icon-text">🚀</span></p>
+
+            <p><span class="icon-text">💪</span> <span class="highlight">VỀ SỨC KHỎE VÀ TINH THẦN:</span> <span class="icon-text">💪</span></p>
+
+            <p>Chúc các bạn năm mới SỨC KHỎE DẺO DAI như tre trúc, khỏe mạnh như voi, dẻo dai như rắn. Không ốm đau, không bệnh tật, không stress, không lo âu. Thân thể luôn khỏe khoắn, tinh thần luôn sảng khoái. <span class="icon-text">🏃</span></p>
+
+            <p>Chúc các bạn ngủ ngon, ăn khỏe, sống vui. Mỗi sáng thức dậy đều tràn đầy năng lượng, mỗi tối đi ngủ đều an lành hạnh phúc. Cơ thể khỏe mạnh, tâm hồn thanh thản, tâm trí minh mẫn. <span class="icon-text">😊</span></p>
+
+            <p>Chúc các bạn luôn duy trì được lối sống lành mạnh, tập thể dục đều đặn, ăn uống khoa học, nghỉ ngơi hợp lý. Hệ miễn dịch luôn khỏe mạnh, đề kháng tốt, xa lánh mọi bệnh tật. <span class="icon-text">🥗</span></p>
+
+            <p>Chúc tinh thần các bạn luôn tích cực, lạc quan, vui vẻ. Không lo lắng, không buồn phiền, không căng thẳng. Tâm hồn thư thái, tình cảm tràn đầy, năng lượng dương tính. Mỗi ngày đều là một ngày tốt lành. <span class="icon-text">🌈</span></p>
+
+            <p><span class="icon-text">❤️</span> <span class="highlight">VỀ TÌNH YÊU VÀ GIA ĐÌNH:</span> <span class="icon-text">❤️</span></p>
+
+            <p>Chúc các bạn độc thân sớm tìm được một nửa yêu thương, người đồng hành hoàn hảo, tri kỷ đích thực. Tình yêu đẹp như mơ, ngọt ngào như mật, bền chặt như đá. Hai người hiểu nhau, thương nhau, cùng nhau xây dựng tương lai. <span class="icon-text">💑</span></p>
+
+            <p>Chúc các bạn đang yêu thêm bền chặt, thêm hạnh phúc, thêm hiểu nhau. Tình cảm mỗi ngày mỗi sâu đậm, tình yêu mỗi ngày mỗi thăng hoa. Cùng nhau vượt qua mọi thử thách, cùng nhau chia sẻ mọi vui buồn, cùng nhau tiến bước tới tương lai tươi sáng. <span class="icon-text">💕</span></p>
+
+            <p>Chúc các bạn đã lập gia đình được hạnh phúc viên mãn, vợ chồng hòa thuận, con cái ngoan ngoãn, cha mẹ khỏe mạnh. Gia đình là tổ ấm, là nơi trở về, là động lực để phấn đấu. Nhà cửa ấm cúng, bữa cơm sum vầy, tiếng cười rộn ràng. <span class="icon-text">🏠</span></p>
+
+            <p>Chúc các bậc phụ huynh có con cái hiếu thảo, giỏi giang, nên người. Chúc các con có cha mẹ khỏe mạnh, yêu thương, nâng đỡ. Tình thân trong gia đình luôn đầm ấm, gắn bó, bền chặt. <span class="icon-text">👨‍👩‍👧‍👦</span></p>
+
+            <p><span class="icon-text">🍀</span> <span class="highlight">VỀ VẬN MAY VÀ THÀNH CÔNG:</span> <span class="icon-text">🍀</span></p>
+
+            <p>Chúc các bạn năm mới gặp NHIỀU MAY MẮN, nhiều thuận lợi, nhiều cơ hội tốt. Vận may luôn mỉm cười với các bạn, thần may mắn luôn đi cùng các bạn. Làm việc gì cũng thuận lợi, đi đâu cũng gặp quý nhân. <span class="icon-text">🎲</span></p>
+
+            <p>Chúc các bạn gặp nhiều quý nhân phù trợ, nhiều người giúp đỡ, nhiều cơ hội vàng. Mọi việc đều diễn ra suôn sẻ, mọi kế hoạch đều thành công, mọi ước mơ đều thành hiện thực. <span class="icon-text">⭐</span></p>
+
+            <p>Chúc các bạn luôn đón nhận những điều tốt đẹp, những tin vui, những bất ngờ thú vị. Cuộc sống tràn đầy những điều kỳ diệu, những khoảnh khắc hạnh phúc, những trải nghiệm đáng nhớ. <span class="icon-text">🎊</span></p>
+
+            <p><span class="icon-text">🌟</span> <span class="highlight">VỀ UỚC MƠ VÀ MỤC TIÊU:</span> <span class="icon-text">🌟</span></p>
+
+            <p>Chúc tất cả các ước mơ của các bạn đều trở thành hiện thực. Những gì các bạn mong muốn sẽ đến với các bạn, những gì các bạn cố gắng sẽ được đền đáp xứng đáng. Mục tiêu đề ra sẽ đạt được, kế hoạch vạch ra sẽ thành công. <span class="icon-text">🎯</span></p>
+
+            <p>Chúc các bạn luôn giữ vững niềm tin, kiên trì theo đuổi đam mê, không ngừng phấn đấu vươn lên. Khó khăn chỉ là tạm thời, thành công đang ở phía trước. Đừng bao giờ từ bỏ ước mơ của mình. <span class="icon-text">💪</span></p>
+
+            <p><span class="icon-text">🌸</span> <span class="highlight">TỔNG KẾT:</span> <span class="icon-text">🌸</span></p>
+
+            <p>Năm Ất Tỵ 2026, chúc các bạn AN KHANG THỊNH VƯỢNG, VẠN SỰ NHƯ Ý, VẠN SỰ HANH THÔNG. Chúc mọi điều tốt đẹp nhất sẽ đến với các bạn và gia đình. Chúc các bạn luôn khỏe mạnh, hạnh phúc, thành công và giàu có. <span class="icon-text">🎉</span></p>
+
+            <p>Xuân về mang đến muôn điều tốt lành. Rắn vàng múa xuân, phúc lộc đầy nhà. Tiền bạc dồi dào, sức khỏe dẻo dai, tình yêu viên mãn, sự nghiệp thăng hoa. Mọi điều ước đều thành hiện thực, mọi mơ ước đều được toại nguyện. <span class="icon-text">🐍</span></p>
+
+            <p>Chúc các bạn có một năm mới thật nhiều niềm vui, tiếng cười, hạnh phúc và thành công. Chúc mỗi ngày của các bạn đều tràn đầy năng lượng tích cực, mỗi tháng đều có tin vui, mỗi mùa đều có may mắn. <span class="icon-text">🎊</span></p>
+
+            <p>Từ tận đáy lòng, tôi gửi đến các bạn những lời chúc tốt đẹp nhất. Chúc các bạn và gia đình một năm mới an lành, hạnh phúc, phát tài phát lộc. CHÚC MỪNG NĂM MỚI 2026! <span class="icon-text">🎆</span></p>
+
+            <p style="text-align: center; font-size: 1.3em; color: #DC143C; margin-top: 30px;">
+                <span class="icon-text">🧧</span> 
+                <strong>TÂN XUÂN ẤT TỴ - VẠN SỰ NHƯ Ý - AN KHANG THỊNH VƯỢNG</strong>
+                <span class="icon-text">🧧</span>
+            </p>
+        </div>
+
+        <div class="signature">
+            <div class="signature-text">Kính chúc,</div>
+            <div class="signature-name">
+                Văn Phong IT <span style="color: #4CAF50;">✔️</span> <span>🧑‍💻</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Firework Corners -->
+<div class="firework-corner firework-left" id="fireworkLeft"></div>
+<div class="firework-corner firework-right" id="fireworkRight"></div>
+
+<!-- Thank You Message -->
+<div class="thank-you-message" id="thankYouMsg" style="display: none;">
+    🙏 CẢM ƠN CÁC BẠN ĐÃ LUÔN ĐỒNG HÀNH 🙏<br>
+    <span style="font-size: 0.8em; display: block; margin-top: 15px;">
+        🎉 CHÚC MỌI ĐIỀU TỐT ĐẸP NHẤT ĐẾN VỚI CÁC BẠN! 🎉
+    </span>
+</div>
+
+<!-- Lanterns -->
+<div class="lantern" style="top: 30px; left: 5%;"></div>
+<div class="lantern" style="top: 30px; right: 5%;"></div>
+
+<script>
+    // Khởi tạo biến
+    let utteranceQueue = [];
+    let isReading = false;
+
+    // Hàm bắt đầu
+    function startExperience() {
+        // Ẩn overlay
+        document.getElementById('startOverlay').style.display = 'none';
+        
+        // Phát nhạc nền
+        const bgMusic = document.getElementById('bgMusic');
+        bgMusic.play().catch(e => console.log('Không thể tự động phát nhạc'));
+
+        // Bắt đầu hiệu ứng
+        startAllEffects();
+
+        // Đọc nội dung sau 2 giây
+        setTimeout(() => {
+            readGreetingText();
+        }, 2000);
+
+        // Hiện thank you message sau 10 giây
+        setTimeout(() => {
+            showThankYouMessage();
+        }, 10000);
+    }
+
+    // Hàm đọc văn bản
+    function readGreetingText() {
+        if (!('speechSynthesis' in window)) {
+            console.log('Trình duyệt không hỗ trợ text-to-speech');
+            return;
+        }
+
+        const content = document.getElementById('greetingText');
+        const paragraphs = content.querySelectorAll('p');
+        
+        paragraphs.forEach((p, index) => {
+            const text = p.innerText;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'vi-VN';
+            utterance.rate = 1.1;
+            utterance.pitch = 1.0;
+            utterance.volume = 0.8;
+
+            // Làm nổi bật đoạn đang đọc
+            utterance.onstart = function() {
+                paragraphs.forEach(para => {
+                    para.style.background = 'transparent';
+                    para.style.transform = 'scale(1)';
+                });
+                p.style.background = 'rgba(255, 215, 0, 0.2)';
+                p.style.transform = 'scale(1.02)';
+                p.style.transition = 'all 0.3s ease';
+            };
+
+            utteranceQueue.push(utterance);
+        });
+
+        // Bắt đầu đọc tuần tự
+        readNext();
+    }
+
+    function readNext() {
+        if (utteranceQueue.length > 0 && !isReading) {
+            isReading = true;
+            const utterance = utteranceQueue.shift();
+            
+            utterance.onend = function() {
+                isReading = false;
+                setTimeout(readNext, 300);
+            };
+
+            window.speechSynthesis.speak(utterance);
+        }
+    }
+
+    // Hiệu ứng lì xì rơi
+    function createLixi() {
+        const lixi = document.createElement('div');
+        lixi.className = 'lixi';
+        lixi.style.left = Math.random() * 100 + '%';
+        lixi.style.animationDuration = (Math.random() * 4 + 4) + 's';
+        lixi.style.animationDelay = Math.random() * 2 + 's';
+        document.body.appendChild(lixi);
+        
+        setTimeout(() => lixi.remove(), 10000);
+    }
+
+    // Hiệu ứng hoa
+    function createFlower() {
+        const flowers = ['🌸', '🌼', '🌺', '🏵️', '💐', '🌻'];
+        const flower = document.createElement('div');
+        flower.className = 'flower';
+        flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+        flower.style.left = Math.random() * 100 + '%';
+        flower.style.fontSize = (Math.random() * 25 + 25) + 'px';
+        flower.style.animationDuration = (Math.random() * 6 + 6) + 's';
+        document.body.appendChild(flower);
+        
+        setTimeout(() => flower.remove(), 15000);
+    }
+
+    // Hiệu ứng confetti
+    function createConfetti() {
+        const colors = ['#FF0000', '#FFD700', '#00FF00', '#0080FF', '#FF00FF', '#FFA500'];
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        confetti.style.animationDelay = Math.random() + 's';
+        document.body.appendChild(confetti);
+        
+        setTimeout(() => confetti.remove(), 8000);
+    }
+
+    // Hiệu ứng sparkle
+    function createSparkle() {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.top = Math.random() * 100 + '%';
+        sparkle.style.animationDelay = Math.random() + 's';
+        document.body.appendChild(sparkle);
+        
+        setTimeout(() => sparkle.remove(), 2000);
+    }
+
+    // Pháo hoa góc
+    function createCornerFirework(container) {
+        const colors = ['#FF0000', '#FFD700', '#00FF00', '#0080FF', '#FF00FF', '#FFA500', '#FFFFFF'];
+        
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '8px';
+            particle.style.height = '8px';
+            particle.style.borderRadius = '50%';
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.boxShadow = `0 0 10px ${colors[Math.floor(Math.random() * colors.length)]}`;
+            
+            const angle = (Math.PI * 2 * i) / 30;
+            const velocity = 50 + Math.random() * 100;
+            const tx = Math.cos(angle) * velocity;
+            const ty = Math.sin(angle) * velocity;
+            
+            particle.style.left = '100px';
+            particle.style.bottom = '100px';
+            
+            container.appendChild(particle);
+            
+            particle.animate([
+                { transform: 'translate(0, 0)', opacity: 1 },
+                { transform: `translate(${tx}px, ${ty}px)`, opacity: 0 }
+            ], {
+                duration: 2000,
+                easing: 'cubic-bezier(0, .9, .57, 1)',
+                iterations: 1
+            });
+            
+            setTimeout(() => particle.remove(), 2000);
+        }
+    }
+
+    // Hiển thị thank you message
+    function showThankYouMessage() {
+        const thankYou = document.getElementById('thankYouMsg');
+        thankYou.style.display = 'block';
+        
+        const leftFirework = document.getElementById('fireworkLeft');
+        const rightFirework = document.getElementById('fireworkRight');
+        
+        // Bắn pháo hoa liên tục
+        setInterval(() => {
+            createCornerFirework(leftFirework);
+            setTimeout(() => createCornerFirework(rightFirework), 500);
+        }, 3000);
+    }
+
+    // Bắt đầu tất cả hiệu ứng
+    function startAllEffects() {
+        // Lì xì
+        setInterval(createLixi, 600);
+        
+        // Hoa
+        setInterval(createFlower, 800);
+        
+        // Confetti
+        setInterval(createConfetti, 400);
+        
+        // Sparkle
+        setInterval(createSparkle, 300);
+
+        // Khởi tạo ban đầu
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createLixi, i * 150);
+            setTimeout(createFlower, i * 200);
+            setTimeout(createConfetti, i * 100);
+            setTimeout(createSparkle, i * 80);
+        }
+
+        // Animation cho các đoạn văn
+        const paragraphs = document.querySelectorAll('.greeting-content p');
+        paragraphs.forEach((p, index) => {
+            p.style.animationDelay = (index * 0.1) + 's';
+        });
+    }
+
+    // Event listener cho nút start
+    document.getElementById('startButton').addEventListener('click', startExperience);
+
+    // Dừng đọc khi rời trang
+    window.addEventListener('beforeunload', () => {
+        window.speechSynthesis.cancel();
+    });
+</script>
+```
+
+</body>
+</html>
